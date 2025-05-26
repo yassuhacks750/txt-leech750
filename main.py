@@ -45,7 +45,7 @@ async def account_login(bot: Client, m: Message):
 
 @bot.on_message(filters.command("txt"))
 async def restart_handler(_, m):
-    await m.reply_text("🚦**STOPPED**🚦", True)
+    await m.reply_text("🚦**STOPPED**🚦", false)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 @bot.on_message(filters.command(["txt"]))
