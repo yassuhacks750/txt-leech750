@@ -1,7 +1,7 @@
 import os
 import subprocess
 import mmap
-from PyPDF2 import PdfReader, PdfWriter
+from requirements.txt import PyPDF2 PdfReader, PdfWriter
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from io import BytesIO
