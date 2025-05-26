@@ -43,6 +43,11 @@ token_cp = 'your cp token'
 async def account_login(bot: Client, m: Message):
     await m.reply_text(f"**Hello Bruh** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n>>I am TXT file Downloader Bot.\n>>Send me /txt Command And Follow Steps\nIf You Want To Stop Me Just Send /stop to stop me 😎")
 
+@bot.on_message(filters.command("stop"))
+async def restart_handler(_, m):
+    await m.reply_text("🚦**STOPPED**🚦", True)
+    os.execl(sys.executable, sys.executable, *sys.argv)
+
 @bot.on_message(filters.command(["txt"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("**Please Send TXT file for download**")
@@ -179,7 +184,7 @@ async def account_login(bot: Client, m: Message):
                 url = f"{api_url}pw-dl?url={url}&token={token}&authorization={api_token}&q={raw_text2}"
 
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
-            name = f'{name1[:60]} 𝐃𝐈𝐋𝐉𝐀𝐋𝐄 ❤️'
+            name = f'{name1[:60]} Yash ❤️'
 
             if "youtu" in url:
                 ytf = f"b[height<={raw_text2}][ext=mp4]/bv[height<={raw_text2}][ext=mp4]+ba[ext=m4a]/b[ext=mp4]"
