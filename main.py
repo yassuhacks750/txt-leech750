@@ -183,6 +183,13 @@ async def account_login(bot: Client, m: Message):
             elif 'master.mpd' in url:
                 url = f"{api_url}pw-dl?url={url}&token={token}&authorization={api_token}&q={raw_text2}"
 
+
+              elif "https://transcoded-videos-v2.classx.co.in/videos/udaanacademychhattisgarh-data/" in url:
+                url = url.replace("https://transcoded-videos-v2.classx.co.in/videos/udaanacademychhattisgarh-data/", "")
+                name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "@").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
+                name = f'{str(count).zfill(3)}) {name1[:60]}'
+                cmd = f'yt-dlp -o "{name}.mp4" "{url}"'
+
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
             name = f'{name1[:60]} Yash ❤️'
 
