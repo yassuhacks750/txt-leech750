@@ -26,12 +26,12 @@ import tgcrypto
 import cloudscraper
 
 bot = Client("bot",
-             bot_token='add',
-             api_id=add,
-             api_hash='add')
+             bot_token='7371144802:AAGIYF4n-svOOi3PJOE22oNA4DSBs9soF7Q',
+             api_id='22849789',
+             api_hash='0fc127c6055acd59f00ec6c229e1e3c4')
 
-owner_id = [6530997270]
-auth_users = [6530997270]
+owner_id = [1144684909]
+auth_users = [1144684909]
 photo1 = 'https://envs.sh/PQ_.jpg'
 getstatusoutput(f"wget {photo1} -O 'photo.jpg'")
 photo = "photo.jpg"
@@ -161,7 +161,7 @@ async def account_login(bot: Client, m: Message):
                 url = mpd
                 keys_string = " ".join([f"--key {key}" for key in keys])
             elif "edge.api.brightcove.com" in url:
-                bcov = 'bcov_auth={yourtoken} #yourcwtoken
+                bcov = 'bcov_auth={yourtoken}' #yourcwtoken
                 url = url.split("bcov_auth")[0]+bcov
             elif "tencdn.classplusapp" in url:
                 headers = {'Host': 'api.classplusapp.com', 'x-access-token': f'{token_cp}', 'user-agent': 'Mobile-Android', 'app-version': '1.4.37.1', 'api-version': '18', 'device-id': '5d0d17ac8b3c9f51', 'device-details': '2848b866799971ca_2848b8667a33216c_SDK-30', 'accept-encoding': 'gzip'}
